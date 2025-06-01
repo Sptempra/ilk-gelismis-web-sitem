@@ -205,6 +205,7 @@ form textarea { /* subject input'u için ayrıca bir style gerekmez */
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
+form input[type="text"]:focus, /* subject input'u için */
 form textarea:focus {
     border-color: #3498db; /* Odaklanınca kenarlık rengi değişir */
     outline: none; /* Tarayıcının varsayılan odak çizgisi kaldırılır */

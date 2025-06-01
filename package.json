@@ -1,24 +1,20 @@
 {
-  "dependencies": {
-    "aos": "^2.3.4"
-  },
-  "name": "ilkprojem",
+  "name": "ilk-projem", 
   "version": "1.0.0",
-  "main": "script.js",
-  "devDependencies": {},
+  "description": "İlk gelişmiş responsive web sitem projesi",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sptempra/ilk-gelismis-web-sitem.git"
+    "dev": "vite",        
+    "build": "vite build", 
+    "preview": "vite preview" 
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sptempra/ilk-gelismis-web-sitem/issues"
+  "devDependencies": {
+    "vite": "^5.2.0" 
   },
-  "homepage": "https://github.com/Sptempra/ilk-gelismis-web-sitem#readme",
-  "description": ""
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
 }
