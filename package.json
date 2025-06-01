@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4"
+  },
+  "name": "ilkprojem",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sptempra/ilk-gelismis-web-sitem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sptempra/ilk-gelismis-web-sitem/issues"
+  },
+  "homepage": "https://github.com/Sptempra/ilk-gelismis-web-sitem#readme",
+  "description": ""
+}

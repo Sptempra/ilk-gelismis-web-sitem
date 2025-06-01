@@ -246,10 +246,6 @@ input[type="submit"]:hover {
     font-size: 0.9em;
 }
 
-.main-footer p {
-    margin-bottom: 10px;
-}
-
 .footer-links a {
     color: #abdffc; /* Açık mavi */
     margin: 0 10px;
@@ -310,6 +306,11 @@ input[type="submit"]:hover {
     margin-top: 15px;
 }
 
+/* Scroll Spy için Aktif Link Stili */
+.main-nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.3); /* Açık beyaz arka plan */
+    border-bottom: 2px solid white; /* Alt çizgi */
+}
 
 /*
    Responsive Tasarım - Media Query'ler

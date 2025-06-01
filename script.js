@@ -87,3 +87,48 @@ if (contactForm) {
     // Eğer form bulunamazsa konsola uyarı yaz
     console.log("Error: Contact form with ID 'contact-form' not found.");
 }
+
+// --- 4. Navigasyon için Scroll Spy ---
+const sections = document.querySelectorAll('main section[id]'); // Tüm section elementlerini ID'si olanları seç
+const navLinks = document.querySelectorAll('.main-nav ul li a'); // Tüm navigasyon linklerini seç
+
+function activateNavLink() {
+    let current = ''; // Aktif bölümün ID'sini tutacak değişken
+
+    // Ekrandaki her bölüm için döngü yap
+    sections.forEach(section => {
+        // Bölümün tarayıcının üst kısmına olan uzaklığı
+        const sectionTop = section.offsetTop;
+        // Bölümün yüksekliği
+        const sectionHeight = section.clientHeight;
+
+        // Eğer şu anki kaydırma pozisyonu, bölümün başlangıcını geçmişse ve bitişini geçmemişse
+        if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+            current = section.getAttribute('id'); // O bölümün ID'sini al
+        }
+    });
+
+    // Tüm navigasyon linklerindeki 'active' sınıfını kaldır
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Eğer bir 'current' ID'si varsa, o ID'ye sahip linke 'active' sınıfını ekle
+    if (current) {
+        const activeLink = document.querySelector(`.main-nav ul li a[href="#${current}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    }
+}
+
+// Sayfa kaydırıldığında ve sayfa yüklendiğinde fonksiyonu çalıştır
+window.addEventListener('scroll', activateNavLink);
+document.addEventListener('DOMContentLoaded', activateNavLink);
+// --- 5. AOS (Animate On Scroll) Kütüphanesi Entegrasyonu ---
+
+// AOS'u başlat (sayfa yüklendiğinde otomatik çalışır)
+AOS.init({
+    duration: 1200, // Animasyon süresi (ms)
+    once: true,    // Animasyonun sadece bir kez oynamasını sağlar (kaydırma yapıldığında)
+});
