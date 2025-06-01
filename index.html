@@ -3,96 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gelişmiş Web Sayfam - Responsive</title>
+    <title>TeknoPazar - Modern Teknoloji Ürünleri</title>
     <link rel="stylesheet" href="/style.css"> 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header class="main-header">
-        <h1 id="dynamic-greeting">Gelişmiş Web Siteme Hoş Geldiniz!</h1>
+        <h1 id="dynamic-greeting">TeknoPazar'a Hoş Geldiniz!</h1>
         <nav class="main-nav">
             <ul>
-                <li><a href="#intro-section">Ana Sayfa</a></li> 
-                <li><a href="#features-section">Özellikler</a></li> 
-                <li><a href="#data-section">Ürünler</a></li> 
+                <li><a href="#product-listing">Ürünler</a></li>
+                <li>
+                    <a href="#" id="cart-icon-link">
+                        <i class="fas fa-shopping-cart"></i> Sepetim (<span id="cart-item-count">0</span>)
+                    </a>
+                </li> 
+                <li><a href="#about-us">Hakkımızda</a></li>
                 <li><a href="#contact-section">İletişim</a></li> 
             </ul>
         </nav>
     </header>
 
     <main class="main-content">
-        <section class="intro-section" id="intro-section"> 
-            <h2>Web Sitesi Geliştirmeye Devam Ediyoruz</h2>
-            <p>Bu bölümde, web sitenizin daha gelişmiş özelliklerini ve responsive tasarım prensiplerini uygulayacağız. Flexbox ve Grid gibi modern CSS düzenleme teknikleriyle tanışın!</p>
-            <img src="https://picsum.photos/800/500" alt="Gelişmiş Web Tasarımı" class="section-image" data-aos="zoom-in">
-            <p>Yukarıdaki görsel, responsive tasarımın önemini vurgulamaktadır. Siteniz her cihazda iyi görünmeli.</p>
+        <section class="hero-section">
+            <h2 data-aos="fade-down">En Son Teknoloji Ürünleri TeknoPazar'da!</h2>
+            <p data-aos="fade-up">Akıllı telefonlardan giyilebilir teknolojilere, en güncel ürünleri keşfedin.</p>
+            <img src="https://picsum.photos/1200/400?random=1" alt="Teknoloji Ürünleri Banner" class="hero-image" data-aos="zoom-in">
         </section>
 
-        <section class="toggle-section">
-            <h2>İçerik Gizle/Göster</h2>
-            <button id="toggle-content-btn" class="action-button">İçeriği Gizle</button>
-            <div id="toggle-area" class="toggle-box" data-aos="fade-up">
-                <p>Bu, bir butona tıklayarak gizleyip gösterebileceğiniz bir içerik kutusudur. JavaScript ile dinamik olarak görünürlüğünü kontrol ediyoruz.</p>
-                <ul>
-                    <li>Dinamik içerik kontrolü.</li>
-                    <li>Kullanıcı deneyimini artırır.</li>
-                    <li>Sadece birkaç satır JavaScript koduyla.</li>
-                </ul>
-            </div>
+        <section class="product-listing" id="product-listing">
+            <h2>Ürünlerimiz</h2>
+            <div class="product-grid" data-aos="fade-up">
+                </div>
         </section>
 
-        <section class="features-section" id="features-section"> 
-            <h2>Temel Özellikler</h2>
-            <div class="feature-cards">
-                <div class="card" data-aos="fade-right">
-                    <h3>Responsive Tasarım</h3>
-                    <p>Siteniz tüm cihazlarda mükemmel görünecek.</p>
-                </div>
-                <div class="card" data-aos="fade-up">
-                    <h3>Hızlı Yükleme</h3>
-                    <p>Optimizasyon sayesinde ziyaretçiler beklemez.</p>
-                </div>
-                <div class="card" data-aos="fade-left">
-                    <h3>Kullanıcı Dostu Arayüz</h3>
-                    <p>Kolay gezinme ve sezgisel deneyim sunar.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="data-section" id="data-section"> 
-            <h2 data-aos="flip-up">Ürünlerimiz</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ürün Adı</th>
-                        <th>Kategori</th>
-                        <th>Fiyatı (TL)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Akıllı Telefon</td>
-                        <td>Elektronik</td>
-                        <td>12000</td>
-                    </tr>
-                    <tr>
-                        <td>Kablosuz Kulaklık</td>
-                        <td>Aksesuar</td>
-                        <td>1500</td>
-                    </tr>
-                    <tr>
-                        <td>Dizüstü Bilgisayar</td>
-                        <td>Elektronik</td>
-                        <td>20000</td>
-                    </tr>
-                    <tr>
-                        <td>Akıllı Saat</td>
-                        <td>Giyilebilir Teknoloji</td>
-                        <td>3000</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="about-us-section" id="about-us">
+            <h2>Hakkımızda</h2>
+            <p>TeknoPazar olarak, en yenilikçi teknoloji ürünlerini en uygun fiyatlarla sizlere ulaştırmayı hedefliyoruz. Müşteri memnuniyeti bizim için her zaman önceliklidir.</p>
+            <p>Geniş ürün yelpazemizle, teknoloji tutkunlarının tüm ihtiyaçlarını karşılamak için buradayız.</p>
         </section>
 
         <section class="contact-section" id="contact-section"> 
@@ -117,13 +67,27 @@
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2024 Gelişmiş Web Sitem. Tüm Hakları Saklıdır.</p>
+        <p>&copy; 2024 TeknoPazar. Tüm Hakları Saklıdır.</p>
         <div class="footer-links">
             <a href="#">Gizlilik Politikası</a>
             <a href="#">Kullanım Şartları</a>
         </div>
     </footer>
 
-<script type="module" src="/script.js"></script>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Alışveriş Sepetim</h2>
+            <div id="cart-items-container">
+                <p>Sepetiniz boş.</p> 
+            </div>
+            <div class="cart-summary">
+                <p>Toplam Tutar: <span id="cart-total-price">0.00</span> TL</p>
+                <button id="checkout-button">Ödeme Yap (Simülasyon)</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/script.js"></script> 
 </body>
 </html>
