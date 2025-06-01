@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Web Sayfam - Responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1 id="dynamic-greeting">Gelişmiş Web Siteme Hoş Geldiniz!</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">Hizmetler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="intro-section">
+            <h2>Web Sitesi Geliştirmeye Devam Ediyoruz</h2>
+            <p>Bu bölümde, web sitenizin daha gelişmiş özelliklerini ve responsive tasarım prensiplerini uygulayacağız. Flexbox ve Grid gibi modern CSS düzenleme teknikleriyle tanışın!</p>
+            <img src="https://picsum.photos/800/500" alt="Gelişmiş Web Tasarımı" class="section-image">
+            <p>Yukarıdaki görsel, responsive tasarımın önemini vurgulamaktadır. Siteniz her cihazda iyi görünmeli.</p>
+        </section>
+
+        <section class="toggle-section">
+            <h2>İçerik Gizle/Göster</h2>
+            <button id="toggle-content-btn" class="action-button">İçeriği Gizle</button>
+            <div id="toggle-area" class="toggle-box">
+                <p>Bu, bir butona tıklayarak gizleyip gösterebileceğiniz bir içerik kutusudur. JavaScript ile dinamik olarak görünürlüğünü kontrol ediyoruz.</p>
+                <ul>
+                    <li>Dinamik içerik kontrolü.</li>
+                    <li>Kullanıcı deneyimini artırır.</li>
+                    <li>Sadece birkaç satır JavaScript koduyla.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>Temel Özellikler</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Responsive Tasarım</h3>
+                    <p>Siteniz tüm cihazlarda mükemmel görünecek.</p>
+                </div>
+                <div class="card">
+                    <h3>Hızlı Yükleme</h3>
+                    <p>Optimizasyon sayesinde ziyaretçiler beklemez.</p>
+                </div>
+                <div class="card">
+                    <h3>Kullanıcı Dostu Arayüz</h3>
+                    <p>Kolay gezinme ve sezgisel deneyim sunar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-section">
+            <h2>Ürünlerimiz</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ürün Adı</th>
+                        <th>Kategori</th>
+                        <th>Fiyatı (TL)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Akıllı Telefon</td>
+                        <td>Elektronik</td>
+                        <td>12000</td>
+                    </tr>
+                    <tr>
+                        <td>Kablosuz Kulaklık</td>
+                        <td>Aksesuar</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>Dizüstü Bilgisayar</td>
+                        <td>Elektronik</td>
+                        <td>20000</td>
+                    </tr>
+                    <tr>
+                        <td>Akıllı Saat</td>
+                        <td>Giyilebilir Teknoloji</td>
+                        <td>3000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="contact-section">
+            <h2>Bize Ulaşın</h2>
+            <form action="#" method="post" id="contact-form">
+                <label for="full-name">Ad Soyad:</label>
+                <input type="text" id="full-name" name="full_name" required>
+
+                <label for="user-email">E-posta:</label>
+                <input type="email" id="user-email" name="user_email" required>
+
+                <label for="subject">Konu:</label>
+                <input type="text" id="subject" name="subject">
+
+                <label for="user-message">Mesajınız:</label>
+                <textarea id="user-message" name="user_message" rows="6" required></textarea>
+
+                <input type="submit" value="Mesajı Gönder">
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Gelişmiş Web Sitem. Tüm Hakları Saklıdır.</p>
+        <div class="footer-links">
+            <a href="#">Gizlilik Politikası</a>
+            <a href="#">Kullanım Şartları</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

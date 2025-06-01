@@ -1,0 +1,363 @@
+/* Genel Ayarlar ve Reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Başlıklar */
+h1 {
+    font-size: 2.8em; /* "em" birimi, varsayılan font boyutuna göre büyür/küçülür */
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #34495e;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #95a5a6;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Bağlantılar */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Ana Bölümler */
+.main-header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-header h1 {
+    color: white;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul {
+    list-style: none; /* Liste işaretlerini kaldırır */
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex; /* Flexbox'ı etkinleştirir */
+    justify-content: center; /* Öğeleri yatayda ortalar */
+    flex-wrap: wrap; /* Öğeler sığmazsa alt satıra geçmesini sağlar */
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Beyazın %20 şeffaf hali */
+    text-decoration: none;
+}
+
+.main-content {
+    max-width: 1200px; /* İçeriğin maksimum genişliği */
+    margin: 30px auto; /* Ortalamak için */
+    padding: 0 20px;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Özellik Kartları (Flexbox Kullanımı) */
+.feature-cards {
+    display: flex; /* Flexbox'ı etkinleştir */
+    flex-wrap: wrap; /* Kartlar sığmazsa alt satıra geçsin */
+    justify-content: center; /* Kartları yatayda ortala */
+    gap: 20px; /* Kartlar arasında boşluk */
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    flex: 1; /* Esnekliği ayarla, tüm kartların eşit boşluk almasını sağlar */
+    min-width: 280px; /* Kartların minimum genişliği, responsive için önemli */
+    max-width: 350px; /* Kartların maksimum genişliği */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Fare üzerine gelince hafifçe yukarı kaydır */
+}
+
+.card h3 {
+    color: #2980b9;
+    margin-top: 0;
+}
+
+/* Tablo Stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Köşelerin yuvarlanması için taşan içeriği gizler */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #ecf0f1;
+    color: #555;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e6f7ff; /* Açık mavi */
+}
+
+/* Form Stilleri */
+form {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 700px;
+    display: grid; /* Grid düzeni etkinleştir */
+    grid-template-columns: 1fr 1fr; /* İki eşit sütun */
+    gap: 20px; /* Sütunlar ve satırlar arasında boşluk */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    grid-column: span 2; /* Etiketlerin iki sütunu kaplamasını sağla */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea { /* subject input'u için ayrıca bir style gerekmez */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Padding ve border genişliğe dahil */
+    font-size: 1.05em;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #3498db; /* Odaklanınca kenarlık rengi değişir */
+    outline: none; /* Tarayıcının varsayılan odak çizgisi kaldırılır */
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+    grid-column: span 2; /* Mesaj kutusunun iki sütunu kaplamasını sağla */
+}
+
+form input[type="submit"] {
+    background-color: #2ecc71; /* Yeşil tonu */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    grid-column: span 2; /* Butonun iki sütunu kaplamasını sağla */
+    justify-self: center; /* Butonu ortala */
+    max-width: 200px; /* Butonun genişliğini sınırlayın */
+}
+
+input[type="submit"]:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px); /* Fare üzerine gelince hafifçe yukarı kaydır */
+}
+
+/* Alt Bilgi (Footer) */
+.main-footer {
+    background-color: #2c3e50; /* Koyu gri */
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+.main-footer p {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #abdffc; /* Açık mavi */
+    margin: 0 10px;
+    font-size: 0.95em;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* JavaScript ile Kontrol Edilen Hidden Sınıfı */
+.hidden {
+    display: none !important; /* Elementi gizler, !important diğer stilleri geçersiz kılar */
+}
+
+/* Buton Etkileşimi İçin Stiller */
+.toggle-section {
+    background-color: #eaf6fb; /* Açık mavi arka plan */
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center; /* İçeriği ortala */
+}
+
+.action-button {
+    background-color: #f39c12; /* Turuncu buton */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+}
+
+.toggle-box {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.toggle-box ul {
+    list-style-type: disc; /* Nokta madde işareti */
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+
+/*
+   Responsive Tasarım - Media Query'ler
+   Ekran boyutu 768 pikselden küçük olduğunda uygulanacak kurallar
+*/
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em; /* Küçük ekranlarda başlığı küçült */
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Menü öğelerini alt alta sırala */
+        align-items: center; /* Dikeyde ortala */
+    }
+
+    .main-nav ul li {
+        margin: 10px 0; /* Dikey boşluk ver */
+    }
+
+    .feature-cards {
+        flex-direction: column; /* Kartları alt alta sırala */
+        align-items: center; /* Ortala */
+    }
+
+    .card {
+        max-width: 90%; /* Kartların genişliğini artır */
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Formu tek sütuna çevir */
+        gap: 15px;
+        padding: 25px;
+    }
+
+    form label,
+    form input[type="text"],
+    form input[type="email"],
+    form textarea,
+    form input[type="submit"] {
+        grid-column: span 1; /* Tüm form elemanları tek sütun kaplasın */
+    }
+
+    .main-content {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+}
